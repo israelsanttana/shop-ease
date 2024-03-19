@@ -3,7 +3,7 @@ import imgBag from '../../assets/sun-lingyan-_H0fjILH5Vw-unsplash.jpg';
 
 export function Card() {
     return (
-        <div className="w-[180px] p-1">
+        <div className="w-[164px] p-1">
             <div>
                 <img src={imgBag} width={180} />
             </div>

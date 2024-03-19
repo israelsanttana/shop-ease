@@ -1,5 +1,5 @@
-import { Layout } from './Layout/Layout'
-import { Home } from './Pages/Home'
+import { Layout } from './layout/Layout'
+import { Home } from './pages/Home'
 
 export function App() {
 
