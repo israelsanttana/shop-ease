@@ -2,10 +2,10 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import '../app/globals.css'
-import { Layout } from './layout/Layout'
-import { Cart } from './pages/Cart'
-import { Home } from './pages/Home'
-import { ProductPage } from './pages/ProductPage'
+import { Layout } from './Layout/Layout'
+import { Cart } from './Pages/Cart'
+import { Home } from './Pages/Home'
+import { ProductPage } from './Pages/ProductPage'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
