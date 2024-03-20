@@ -1,4 +1,5 @@
 
+import { Card } from "@/components/Card/Card";
 import { getProducts, interfaceProduct } from "@/service/Service";
 import { useEffect, useState } from "react";
 export function Home() {
@@ -16,8 +17,7 @@ export function Home() {
         <div className="container pt-4">
             <div className="grid grid-cols-2 gap-4">
                 {data.map((product) => (
-                    <p key={product.id}>{product.description}</p>
-
+                    <Card key={product.id} product={product} />
                 ))}
             </div>
         </div>
