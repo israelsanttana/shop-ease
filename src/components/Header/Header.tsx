@@ -1,5 +1,5 @@
 import { MagnifyingGlass, ShoppingCartSimple } from "@phosphor-icons/react";
-import { Categories } from "../Categories/Categories.tsx";
+import { Categories } from "../Categories/Categories";
 import { Separator } from "../ui/separator";
 
 export function Header() {
