@@ -1,4 +1,5 @@
 import { MagnifyingGlass, ShoppingCartSimple } from "@phosphor-icons/react";
+import { Link } from "react-router-dom";
 import { Categories } from "../Categories/Categories";
 import { Separator } from "../ui/separator";
 
@@ -8,14 +9,16 @@ export function Header() {
             <div className="flex justify-between pt-4 pb-4">
                 <div>
                     <MagnifyingGlass size={24} />
-                    <p className="hidden lg:visible">Search</p>
                 </div>
                 <div>
-                    <p>ShopEase</p>
+                    <Link to="/" >
+                        <p>ShopEase</p>
+                    </Link>
                 </div>
                 <div className="flex">
-                    <ShoppingCartSimple size={24} />
-                    <p className="hidden lg:visible">Cart</p>
+                    <Link to="/cart" >
+                        <ShoppingCartSimple size={24} />
+                    </Link>
                 </div>
             </div>
             <Separator className="bg-slate-900" />
