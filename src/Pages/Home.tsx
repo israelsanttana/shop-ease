@@ -1,22 +1,23 @@
 
 import { Card } from "@/components/Card/Card";
-import { getProducts, interfaceProduct } from "@/service/Service";
-import { useEffect, useState } from "react";
+import { useProductContext } from "@/contexts/PoductContext";
+import { getProducts } from "@/service/Service";
+import { useEffect } from "react";
 export function Home() {
 
-    const [data, setData] = useState<interfaceProduct[]>([]);
+    const { filteredProducts, setFilteredProducts } = useProductContext();
     useEffect(() => {
         const fetchProducts = async () => {
             const response = await getProducts('https://api.escuelajs.co/api/v1/products');
-            setData(response);
+            setFilteredProducts(response);
         };
         fetchProducts();
     }, []);
 
     return (
         <div className="container pt-4">
-            <div className=" grid grid-cols-2 gap-4 lg:grid-cols-4">
-                {data.map((product) => (
+            <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
+                {filteredProducts.map((product) => (
                     <Card key={product.id} product={product} />
                 ))}
             </div>
